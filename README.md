@@ -1,39 +1,13 @@
-/* # -Student-Result-Topper-Finder
-Language: C    What is project: Takes marks of multiple students, calculates total marks, and identifies the topper.    Key Concepts Used: Structures, Array of Records, Loops, Comparative Logic. */
-#include <stdio.h>
+/* 
 
-struct Student {
-    char name[50];
-    int m1, m2, m3;
-    int total;
-};
+# -Student-Result-Topper-Finder
 
-int main() {
-    struct Student s[50], topper;
-    int n, i;
+Language: C   
+ 
+What is project: Takes marks of multiple students, calculates total marks, and identifies the topper. 
 
-    printf("Enter number of students: ");
-    scanf("%d", &n);
+Key Concepts Used: Structures, Array of Records, Loops, Comparative Logic. 
 
-    for(i = 0; i < n; i++) {
-        printf("\nEnter Name of Student %d: ", i+1);
-        scanf("%s", s[i].name);
+*/
 
-        printf("Enter 3 Subject Marks: ");
-        scanf("%d %d %d", &s[i].m1, &s[i].m2, &s[i].m3);
 
-        s[i].total = s[i].m1 + s[i].m2 + s[i].m3;
-    }
-
-    topper = s[0];
-    for(i = 1; i < n; i++) {
-        if(s[i].total > topper.total)
-            topper = s[i];
-    }
-
-    printf("\n----- CLASS TOPPER -----\n");
-    printf("Name : %s\n", topper.name);
-    printf("Total Marks : %d\n", topper.total);
-
-    return 0;
-}
