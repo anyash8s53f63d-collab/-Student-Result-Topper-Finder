@@ -1,6 +1,6 @@
 /* 
 
-# -Student-Result-Topper-Finder
+# Student-Result-Topper-Finder
 
 Language: C   
  
